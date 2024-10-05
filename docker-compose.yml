@@ -7,6 +7,7 @@ services:
     environment:
       - DISPLAY=host.docker.internal:0  # Set DISPLAY to Windows host
     network_mode: host  # Use host networking
+    ipc: host  # Use host IPC
     tty: true
     entrypoint: /bin/bash
   ros-vacuum:
@@ -15,5 +16,6 @@ services:
     volumes:
       - ./src:/home/ros/src
     network_mode: host  # Use host networking
+    ipc: host  # Use host IPC
     tty: true
     entrypoint: /bin/bash
